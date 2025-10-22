@@ -1,0 +1,27 @@
+package com.amk.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+/**
+ * @author 阿明楷
+ * @Date 2025/10/22:16:59
+ * @See:
+ */
+@Controller
+public class HelloController {
+    //handlers
+
+    /**
+     * handler就是controller内部的具体方法
+     * @RequestMapping("/springmvc/hello") 就是用来向handlerMapping中注册的方法注解!
+     * @ResponseBody 代表向浏览器直接返回数据!
+     */
+    @RequestMapping("/springmvc/hello")
+    @ResponseBody
+    public String hello(){
+        System.out.println("HelloController.hello");
+        return "hello springmvc!!";
+    }
+}
